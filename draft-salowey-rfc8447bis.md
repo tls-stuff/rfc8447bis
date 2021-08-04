@@ -702,6 +702,64 @@ here is not advised.  Implementers and users need to check that the
 cryptographic algorithms listed continue to provide the expected level
 of security.
 
+Experimental Codepoints {#experiment}
+========================
+The Transport Layer Security (TLS) Extensions IANA registry currently uses
+the Specification Required registration policy for unassigned values, along with a small block
+reserved for Private Use. As specified in {{?RFC8126}}, assignments made in the Private Use
+space are not useful for broad interoperability experiments. Therefore, experimental extensions
+which require large-scale interopable experiments must use values from the unassigned range.
+Currently, nothing prevents applications from using unassigned codepoints without an IANA
+assignment. This means that applications which request an assignment according to this procedure via a specification may inadvertently choose a codepoint value that some other
+application is squatting on. In turn, this negatively may impact experiments.
+
+To promote visibility of unassigned codepoints and lower the bar for large-scale extension
+experiments, this draft outlines a different registration policy for TLS extensions. In
+particular, it allocates a number of contiguous codepoints for experimental purposes and
+delegates management of this space to the Working Group contributors. The rest of this document
+describes this policy.
+
+This section describe experimental codepoint blocks for IANA registries
+related to TLS, including: Extensions {{exp-extensions}} and Supported Groups {{exp-supported-groups}}.
+For each of these registries, this document allocates a set of experimental codepoint blocks
+from the unassigned space in the registry. Each codepoint in this range is then managed
+by the Working Group contributors via a publicly accessible and transparent page with changes
+tracked by version control on [GitHub](https://github.com/) or another similar service. The
+details of each experimental codepoint are tracked in a table, which lists information about
+the request along with expiration information. Table details are documented in the following
+sections.  The registration policy of additional experimental codepoint blocks
+for these registries is Specification Required {{!RFC8126}}.
+
+Applications request experimental codepoints in these blocks by requesting changes to the
+corresponding table. Each request indicates a value, name, and a corresponding reference.
+Requests without these contents will be rejected.  The expiry date column will be initialized
+to a date 1 year from the day the entry was created.  When the expiry date is reached the entry
+is evaluated to determine if it can be returned back to the pool.  If the codepoint is
+still in use then it may be renewed for another year period.
+
+Experimental codepoint values will be distributed on a first-come-first-serve basis. All experimental
+assignments will be temporary.
+
+## Extensions {#exp-extensions}
+
+The Extensions registry page will host a table with the four columns: (1) Codepoint,
+(2) Extension Name, (3) Reference, and (4) Expiry Date.
+
+
+IANA is requested to create the following entries in the existing Transport Layer Security (TLS) Extensions registry:
+
+- experimental_block_1(64251-65279), with the "TLS 1.3" column values set to "N/A" and "Recommended" column set to "No".
+
+
+## Supported Groups {#exp-supported-groups}
+
+The Supported Groups registry page will host a table with the four columns: (1) Codepoint,
+(2) Supported Group Name, (3) Reference, and (4) Expiry Date.
+
+IANA is requested to create the following entries in the existing Transport Layer Security (TLS) Supported Groups registry:
+
+- experimental_block_1(64251-65023), with the "DTLS-OK" column values set to "N/A" and "Recommended" column set to "No".
+
 Designated Expert Pool {#expert-pool}
 ======================
 
@@ -760,6 +818,16 @@ of security.
 Designated experts ensure the specification is publicly available.  They may
 provide more in depth reviews.  Their review should not be taken as an
 endorsement of the cipher suite, extension, supported group, etc.
+
+This document introduces a new procedure for requesting and managing experimental TLS
+extension values. Codepoint collisions, which may produce interoperability or security issues,
+may still occur in practice for applications which do not use the existing procedures or those
+defined herein. The new procedure aims to mitigate this risk going forward with an easy-to-use
+range of experimental codepoints.
+
+Any extension using a code point in this space is considered a work in progress. There may be
+security or interoperability problems with the extension.  The specification the extension is
+based on may change without notice.
 
 IANA Considerations
 ===================
