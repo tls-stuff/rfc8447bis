@@ -703,7 +703,6 @@ cryptographic algorithms listed continue to provide the expected level
 of security.
 
 Experimental Codepoints {#experiment}
-========================
 The Transport Layer Security (TLS) Extensions IANA registry currently uses
 the Specification Required registration policy for unassigned values, along with a small block
 reserved for Private Use. As specified in {{?RFC8126}}, assignments made in the Private Use
