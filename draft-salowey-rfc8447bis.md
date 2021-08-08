@@ -118,14 +118,25 @@ to also refer to this document.
 
 The instructions in this document add a Recommended column to many of
 the TLS registries to indicate parameters that are generally recommended
-for implementations to support.  Adding a Recommended parameter to a
-registry or updating a parameter to Recommended status requires
-standards action.  Not all parameters defined in standards track
-documents need to be marked as Recommended.
+for implementations to support, parameters that are not recommended for 
+specific reasons and paramters that have not been evauated. 
 
-If an item is not marked as Recommended it does not necessarily mean
-that it is flawed, rather, it indicates that either the item has not
-been through the IETF consensus process, has limited applicability, or
+ Parameters that are recommended are marked with a 'Y'
+ Parameters that are unevaluated are marked with a 'U'
+   Parameters that are not recommended are maked with a 'N' and include
+   a reference to the document and section which describes the limitation 
+   of the parameter
+
+Adding a Recommended parameter to a registry or updating a parameter to 
+Recommended status requires standards action.  Not all parameters defined in standards track
+documents need to be marked as Recommended.  Changing the recommended status of a standards track document requires standards action.  
+
+If an item is not marked as Not Recommended it does not necessarily mean
+that it is flawed in all cases, but that has limited applicability, or
+is intended only for specific use cases indicated in the referenced text.  
+
+If an item is marked as Unevaluated it indicates that either the item has not
+been through the IETF consensus process and it may have limited applicability, or
 is intended only for specific use cases.
 
 # Session Ticket TLS Extension
