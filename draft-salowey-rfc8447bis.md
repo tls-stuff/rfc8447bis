@@ -716,8 +716,7 @@ application is squatting on. In turn, this negatively may impact experiments.
 To promote visibility of unassigned codepoints and lower the bar for large-scale extension
 experiments, this draft outlines a different registration policy for TLS extensions. In
 particular, it allocates a number of contiguous codepoints for experimental purposes and
-delegates management of this space to the Working Group contributors. The rest of this document
-describes this policy.
+delegates management of this space to the Working Group contributors. 
 
 This section describe experimental codepoint blocks for IANA registries
 related to TLS, including: Extensions {{exp-extensions}} and Supported Groups {{exp-supported-groups}}.
