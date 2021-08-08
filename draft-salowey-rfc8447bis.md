@@ -718,7 +718,7 @@ experiments, this draft outlines a different registration policy for TLS extensi
 particular, it allocates a number of contiguous codepoints for experimental purposes and
 delegates management of this space to the Working Group contributors. 
 
-This section describe experimental codepoint blocks for IANA registries
+This section describes experimental codepoint blocks for IANA registries
 related to TLS, including: Extensions {{exp-extensions}} and Supported Groups {{exp-supported-groups}}.
 For each of these registries, this document allocates a set of experimental codepoint blocks
 from the unassigned space in the registry. Each codepoint in this range is then managed
