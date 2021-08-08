@@ -4,6 +4,7 @@ abbrev: (D)TLS IANA Registry Updates
 docname: draft-ietf-tls-rfc8447bis
 date: {DATE}
 category: std
+obsoletes: 8447
 updates: 3749, 5077, 4680, 5246, 5705, 5878, 6520, 7301
 
 ipr: trust200902
@@ -38,21 +39,20 @@ the registration policy.  These changes were mostly motivated by WG
 review of the (D)TLS-related registries undertaken as part of the
 TLS1.3 development process.
 
-This document updates the following RFCs: 3749, 5077, 4680, 5246, 5705,
+This document obsoletes RFC8447 and updates the following RFCs: 3749, 5077, 4680, 5246, 5705,
 5878, 6520, 7301.
 
 --- middle
 
-Process Note
-============
+# Process Note
+
 
 As the authors of this draft are also the WG chairs, the responsible
 Area Director has agreed to judge consensus.
 
 RFC EDITOR: Please delete section prior to publication.
 
-Introduction
-============
+# Introduction
 
 This document instructs IANA to make changes to a number of Transport
 Layer Security and Datagram Transport Layer Security ((D)TLS) related
@@ -72,8 +72,8 @@ Types {{?RFC6961}} registries; the existing policies (Standards Action
 for the first three; IETF Review for the last), are appropriate for
 these one-byte code points because of their scarcity.
 
-Terminology
-===========
+# Terminology
+
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -81,8 +81,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in
 all capitals, as shown here.
 
-Add "TLS" to Registry Names
-===========================
+# Add "TLS" to Registry Names
+
 
 For consistency amongst TLS registries, IANA
 [SHALL prepend/has prepended] "TLS" to the following registries:
@@ -96,8 +96,7 @@ IANA [SHALL update/has updated] the reference for these four registries
 to also refer to this document.  The remainder of this document will
 use the registry names with the "TLS" prefix.
 
-Aligning with RFC 8126
-======================
+# Aligning with RFC 8126
 
 Many of the TLS-related IANA registries were defined prior to
 {{!RFC8126}} where "IETF Consensus" was used instead of the
@@ -115,8 +114,7 @@ of this document or {{?I-D.ietf-tls-rfc4492bis}}.
 IANA [SHALL update/has updated] the reference for these two registries
 to also refer to this document.
 
-Adding Recommended Column
-=========================
+# Adding Recommended Column
 
 The instructions in this document add a Recommended column to many of
 the TLS registries to indicate parameters that are generally recommended
@@ -130,8 +128,7 @@ that it is flawed, rather, it indicates that either the item has not
 been through the IETF consensus process, has limited applicability, or
 is intended only for specific use cases.
 
-Session Ticket TLS Extension
-============================
+# Session Ticket TLS Extension
 
 The nomenclature for the registry entries in the TLS ExtensionType
 Values registry correspond to the presentation language field name
@@ -144,8 +141,7 @@ consistently identified in the registry, IANA:
 - [SHALL add/has added] a reference to this document in the Reference
 column for entry 35.
 
-TLS ExtensionType Values
-========================
+# TLS ExtensionType Values
 
 Experience has shown that the IETF Review registry policy for TLS
 Extensions was too strict.  Based on WG consensus, the decision was
@@ -263,8 +259,7 @@ document.  The registry and its allocation policy is listed below:
    extension not listed there marked as "-" to indicate that it is not
    used by TLS 1.3.
 
-TLS Cipher Suite Registry
-=========================
+# TLS Cipher Suite Registry
 
 Experience has shown that the IETF Consensus registry policy for TLS
 Cipher Suites was too strict.  Based on WG consensus, the decision was
@@ -403,8 +398,7 @@ widespread experiments, temporary reservations are available.
 IANA [SHALL update/has updated] the reference for this registry to
 also refer to this document.
 
-TLS Supported Groups
-====================
+# TLS Supported Groups
 
 Similar to cipher suites, supported groups have proliferated over time
 and some use the registry to measure implementations.  Therefore, IANA
@@ -458,8 +452,7 @@ refer to this document.
 
 The value 0 (0x0000) is to be marked as reserved.
 
-TLS ClientCertificateType Identifiers
-=====================================
+# TLS ClientCertificateType Identifiers
 
 Experience has shown that the IETF Consensus registry policy for TLS
 ClientCertificateType Identifiers is too strict.   Based on WG
@@ -506,8 +499,7 @@ that it is flawed; rather, it indicates that either the item has not
 been through the IETF consensus process, has limited applicability, or
 is intended only for specific use cases.
 
-New Session Ticket TLS Handshake Message Type
-=============================================
+# New Session Ticket TLS Handshake Message Type
 
 To align with TLS implementations and to align the naming nomenclature
 with other Handshake message types, IANA:
@@ -518,8 +510,7 @@ to "new_session_ticket (renamed from NewSessionTicket)" {{!RFC5077}}.
 - [SHALL add/has added] a reference to this document in the Reference
 column for entry 4 in the TLS HandshakeType registry.
 
-TLS Exporter Label Registry
-===========================
+# TLS Exporter Label Registry
 
 To aid those reviewers who start with the IANA registry, IANA [SHALL
 add/has added]:
@@ -583,8 +574,7 @@ is intended only for specific use cases.
 IANA [SHALL update/has updated] the reference for this registry to also
 refer to this document.
 
-Add Missing Item to TLS Alert Registry
-===========================================================
+# Add Missing Item to TLS Alert Registry
 
 IANA [SHALL add/has added] the following entry to the TLS Alert
 Registry; the entry was omitted from the IANA instructions in
@@ -592,8 +582,7 @@ Registry; the entry was omitted from the IANA instructions in
 
     120   no_application_protocol  Y  [RFC7301][this-RFC]
 
-TLS Certificate Types
-=====================
+# TLS Certificate Types
 
 Experience has shown that the IETF Consensus registry policy for TLS
 Certificate Types is too strict.  Based on WG consensus, the decision
@@ -644,8 +633,7 @@ is intended only for specific use cases.
 IANA [SHALL update/has updated] the reference for this registry to also
 refer this document.
 
-Orphaned Extensions
-===================
+# Orphaned Extensions
 
 To make it clear that (D)TLS 1.3 has orphaned certain extensions (i.e.,
 some extensions are only applicable to version of (D)TLS prior to 1.3),
@@ -659,8 +647,7 @@ cert_type, ec_point_formats, srp, status_request_v2, encrypt_then_mac,
 extended_master_secret, session_ticket, and renegotiation_info.
 These extensions are not applicable to (D)TLS 1.3.
 
-Orphaned Registries
-===================
+# Orphaned Registries
 
 To make it clear that (D)TLS 1.3 has orphaned certain registries (i.e.,
 they are only applicable to version of (D)TLS protocol versions prior
@@ -702,7 +689,7 @@ here is not advised.  Implementers and users need to check that the
 cryptographic algorithms listed continue to provide the expected level
 of security.
 
-Experimental Codepoints {#experiment}
+# Experimental Codepoints {#experiment}
 The Transport Layer Security (TLS) Extensions IANA registry currently uses
 the Specification Required registration policy for unassigned values, along with a small block
 reserved for Private Use. As specified in {{?RFC8126}}, assignments made in the Private Use
@@ -758,8 +745,7 @@ IANA is requested to create the following entries in the existing Transport Laye
 
 - experimental_block_1(64251-65023), with the "DTLS-OK" column values set to "N/A" and "Recommended" column set to "No".
 
-Designated Expert Pool {#expert-pool}
-======================
+# Designated Expert Pool {#expert-pool}
 
 Specification Required {{RFC8126}} registry requests are registered
 after a three-week review period on the tls-reg-review@ietf.org
@@ -796,8 +782,7 @@ registration decisions.  In cases where a registration decision could
 be perceived as creating a conflict of interest for a particular
 Expert, that Expert SHOULD defer to the judgment of the other Experts.
 
-Security Considerations
-=======================
+# Security Considerations
 
 The change to Specification Required from IETF Review lowers the amount
 of review provided by the WG for cipher suites and supported groups.
@@ -827,9 +812,11 @@ Any extension using a code point in this space is considered a work in progress.
 security or interoperability problems with the extension.  The extension specification may 
 change without notice.
 
-IANA Considerations
-===================
+# IANA Considerations
 
-This document is entirely about changes to TLS-related IANA registries.
+This document is entirely about changes to TLS-related IANA registries.  This revision of the document only has IANA actions in the following sections:
+
+ {#experiment} Experimental Codepoints
+ 
 
 --- back
