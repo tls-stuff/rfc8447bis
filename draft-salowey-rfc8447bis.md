@@ -825,8 +825,8 @@ defined herein. The new procedure aims to mitigate this risk going forward with 
 range of experimental codepoints.
 
 Any extension using a code point in this space is considered a work in progress. There may be
-security or interoperability problems with the extension.  The specification the extension is
-based on may change without notice.
+security or interoperability problems with the extension.  The extension specification may 
+change without notice.
 
 IANA Considerations
 ===================
