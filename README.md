@@ -2,9 +2,9 @@
 
 This is the working area for the internet-draft, "D/TLS IANA Registry Updates".
 
-* [Editor's copy](https://tlswg.github.io/rfc8447bis/)
+* [Editor's copy](https://tls-stuff.github.io/rfc8447bis/docs/draft-salowey-rfc8447bis.txt)
 * [RFC](https://datatracker.ietf.org/doc/html/rfc8447/)
-* [Compare Working Group Draft and Editor's copy](https://tools.ietf.org/rfcdiff?url1=https://datatracker.ietf.org/doc/html/rfc8447&url2=https://tlswg.github.io/draft-ietf-tls-iana-registry-updates/draft-ietf-tls-iana-registry-updates.txt)
+* [Compare Working Group Draft and Editor's copy](https://tools.ietf.org/rfcdiff?url1=https://datatracker.ietf.org/doc/html/rfc8447&url2=https://tls-stuff.github.io/rfc8447bis/docs/draft-salowey-rfc8447bis.txt)
 
 
 ## Building the Draft
