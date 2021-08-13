@@ -39,18 +39,10 @@ the registration policy.  These changes were mostly motivated by WG
 review of the (D)TLS-related registries undertaken as part of the
 TLS1.3 development process.
 
-This document obsoletes RFC8447 and updates the following RFCs: 3749, 5077, 4680, 5246, 5705,
-5878, 6520, 7301.
+This document obsoletes RFC8447 and updates the following RFCs:
+3749, 5077, 4680, 5246, 5705, 5878, 6520, 7301.
 
 --- middle
-
-# Process Note
-
-
-As the authors of this draft are also the WG chairs, the responsible
-Area Director has agreed to judge consensus.
-
-RFC EDITOR: Please delete section prior to publication.
 
 # Introduction
 
@@ -74,15 +66,9 @@ these one-byte code points because of their scarcity.
 
 # Terminology
 
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-"SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-"OPTIONAL" in this document are to be interpreted as described in
-BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in
-all capitals, as shown here.
+{::boilerplate bcp14-tagged}
 
 # Add "TLS" to Registry Names
-
 
 For consistency amongst TLS registries, IANA
 [SHALL prepend/has prepended] "TLS" to the following registries:
@@ -118,25 +104,28 @@ to also refer to this document.
 
 The instructions in this document add a Recommended column to many of
 the TLS registries to indicate parameters that are generally recommended
-for implementations to support, parameters that are not recommended for 
-specific reasons and parameters that have not been evauated. 
+for implementations to support, parameters that are not recommended for
+specific reasons, and parameters that have not been evauated.
 
- - Parameters that are recommended are marked with a 'Y'
- - Parameters that are not recommended are maked with a 'N' and include
-   a reference to the document and section which describes the limitation 
-   of the parameter
- - Parameters that are unevaluated are unmarked with a ' ' 
+- Parameters that are Recommended are marked with a 'Y'.
+- Parameters that are Not Recommended are maked with a 'N' and include
+  a reference to the document and section which describes the limitation
+  of the parameter.
+- Parameters that are Unevaluated are unmarked with a ' '.
 
-Adding a Recommended parameter to a registry or updating a parameter to 
-Recommended status requires standards action.  Not all parameters defined in standards track
-documents need to be marked as Recommended.  Changing the recommended status of a standards track parameter requires standards action.  
+Adding a Recommended parameter to a registry or updating a parameter to
+Recommended status requires standards action.  Not all parameters defined
+in standards track documents need to be marked as Recommended.  Changing
+the recommended status of a standards track parameter requires standards action.
 
 If an item is not marked as Not Recommended it does not necessarily mean
-that it is flawed in all cases.  A parameter that is not recommended may have limited applicability, or may be intended only for specific use cases as indicated in the referenced text.  
+that it is flawed in all cases.  A parameter that is not recommended may
+have limited applicability, or may be intended only for specific use cases
+as indicated in the referenced text.
 
 If an item is marked as Unevaluated it indicates that either the item has not
-been through the IETF consensus process and it may have limited applicability, or
-may be intended only for specific use cases.
+been through the IETF consensus process and it may have limited applicability,
+or may be intended only for specific use cases.
 
 [Note: the registries in the rest of the document will need to have the recommended column updated appropriately]
 
@@ -148,10 +137,10 @@ except for entry 35.  To ensure that the values in the registry are
 consistently identified in the registry, IANA:
 
 - [SHALL rename/has renamed] entry 35 to "session_ticket (renamed from
-"SessionTicket TLS")" {{!RFC5077}}.
+  "SessionTicket TLS")" {{!RFC5077}}.
 
 - [SHALL add/has added] a reference to this document in the Reference
-column for entry 35.
+  column for entry 35.
 
 # TLS ExtensionType Values
 
@@ -702,19 +691,23 @@ cryptographic algorithms listed continue to provide the expected level
 of security.
 
 # Experimental Codepoints {#experiment}
-The Transport Layer Security (TLS) Extensions IANA registry currently uses
-the Specification Required registration policy for unassigned values, along with a small block
-reserved for Private Use. As specified in {{?RFC8126}}, assignments made in the Private Use
-space are not useful for broad interoperability experiments. Therefore, experimental extensions
-which require large-scale interopable experiments must use values from the unassigned range.
-Currently, nothing prevents applications from using unassigned codepoints without an IANA
-assignment. This means that applications which request an assignment according to this procedure via a specification may inadvertently choose a codepoint value that some other
-application is squatting on. In turn, this negatively may impact experiments.
 
-To promote visibility of unassigned codepoints and lower the bar for large-scale extension
-experiments, this draft outlines a different registration policy for TLS extensions. In
-particular, it allocates a number of contiguous codepoints for experimental purposes and
-delegates management of this space to the Working Group contributors. 
+Many of the Transport Layer Security (TLS) IANA registries currently
+use the Specification Required registration policy for unassigned values,
+along with a small block reserved for Private Use. As specified in {{?RFC8126}},
+assignments made in the Private Use space are not useful for broad
+interoperability experiments. Therefore, experimental code points which require
+large-scale interopable experiments must use values from the unassigned range.
+Currently, nothing prevents applications from using unassigned codepoints without
+an IANA assignment. This means that applications which request an assignment
+according to this procedure via a specification may inadvertently choose a codepoint
+value that some other application is squatting on. In turn, this negatively may
+impact experiments.
+
+To promote visibility of unassigned codepoints and lower the bar for large-scale
+experiments, this draft outlines a different registration policy for TLS registries.
+In particular, it allocates a number of contiguous codepoints for experimental
+purposes and delegates management of this space to the Working Group contributors.
 
 This section describes experimental codepoint blocks for IANA registries
 related to TLS, including: Extensions {{exp-extensions}} and Supported Groups {{exp-supported-groups}}.
@@ -734,19 +727,19 @@ to a date 1 year from the day the entry was created.  When the expiry date is re
 is evaluated to determine if it can be returned back to the pool.  If the codepoint is
 still in use then it may be renewed for another year period.
 
-Experimental codepoint values will be distributed on a first-come-first-serve basis. All experimental
-assignments will be temporary.
+Experimental codepoint values will be distributed on a first-come-first-serve basis.
+All experimental assignments will be temporary.
+
+[OPEN ISSUE: should experimental code blocks be added for all other registries?]
 
 ## Extensions {#exp-extensions}
 
 The Extensions registry page will host a table with the four columns: (1) Codepoint,
 (2) Extension Name, (3) Reference, and (4) Expiry Date.
 
-
 IANA is requested to create the following entries in the existing Transport Layer Security (TLS) Extensions registry:
 
 - experimental_block_1(64251-65279), with the "TLS 1.3" column values set to "N/A" and "Recommended" column set to "No".
-
 
 ## Supported Groups {#exp-supported-groups}
 
@@ -821,7 +814,7 @@ defined herein. The new procedure aims to mitigate this risk going forward with 
 range of experimental codepoints.
 
 Any extension using a code point in this space is considered a work in progress. There may be
-security or interoperability problems with the extension.  The extension specification may 
+security or interoperability problems with the extension.  The extension specification may
 change without notice.
 
 # IANA Considerations
@@ -829,6 +822,6 @@ change without notice.
 This document is entirely about changes to TLS-related IANA registries.  This revision of the document only has IANA actions in the following sections:
 
  {#experiment} Experimental Codepoints
- 
+
 
 --- back
