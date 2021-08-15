@@ -1,7 +1,7 @@
 ---
 title: IANA Registry Updates for Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)
 abbrev: (D)TLS IANA Registry Updates
-docname: draft-ietf-tls-rfc8447bis
+docname: draft-ietf-tls-rfc8447bis-00
 date: {DATE}
 category: std
 obsoletes: 8447
