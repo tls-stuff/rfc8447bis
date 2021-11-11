@@ -102,32 +102,34 @@ to also refer to this document.
 
 # Adding Recommended Column
 
-The instructions in this document add a Recommended column to many of
-the TLS registries to indicate parameters that are generally recommended
-for implementations to support, parameters that are not recommended for
-specific reasons, and parameters that have not been evauated.
+The instructions in this document update the Recommended column,
+originally added in {{?!RFC8447}} to add a third value, "D",
+indicating that a value is "Discouraged". The permitted values
+are:
 
-- Parameters that are Recommended are marked with a 'Y'.
-- Parameters that are Not Recommended are maked with a 'N' and include
-  a reference to the document and section which describes the limitation
-  of the parameter.
-- Parameters that are Unevaluated are unmarked with a ' '.
+- Y: Indicates that the IETF has consensus that the
+  item is RECOMMENDED.
+- N: Indicates that the item has not been evaluated by
+  the IETF.
+- D: Indicates that the item is discouraged and SHOULD
+  NOT or MUST NOT be used.
 
-Adding a Recommended parameter to a registry or updating a parameter to
-Recommended status requires standards action.  Not all parameters defined
-in standards track documents need to be marked as Recommended.  Changing
-the recommended status of a standards track parameter requires standards action.
+Setting the Recommended item to "Y" or "D" or changing a
+item whose current value is "Y" or "D" requires standards action.
+Not all items defined in standards track documents need to be
+marked as Recommended. Changing the Recommended status of a standards
+track item requires standards action.
 
-If an item is not marked as Not Recommended it does not necessarily mean
-that it is flawed in all cases.  A parameter that is not recommended may
-have limited applicability, or may be intended only for specific use cases
-as indicated in the referenced text.
+If an item is not marked as "Recommended" (i.e., "N"), it does not
+necessarily mean that it is flawed; rather, it indicates that the
+item either has not been through the IETF consensus process, has
+limited applicability, or is intended only for specific use cases.
+Note that items which have IETF consensus and which are believed
+to be generally safe MAY be marked "Y" even if they are only
+intended for some specific application, such as WebRTC or IoT.
 
-If an item is marked as Unevaluated it indicates that either the item has not
-been through the IETF consensus process and it may have limited applicability,
-or may be intended only for specific use cases.
-
-[Note: the registries in the rest of the document will need to have the recommended column updated appropriately]
+[Note: the registries in the rest of the document will need to have the recommended column updated
+appropriately, specifically to deprecate MD5 and SHA-1, etc.]
 
 # Session Ticket TLS Extension
 
