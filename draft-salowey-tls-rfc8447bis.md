@@ -108,25 +108,31 @@ indicating that a value is "Discouraged". The permitted values
 are:
 
 - Y: Indicates that the IETF has consensus that the
-  item is RECOMMENDED.
+    item is RECOMMENDED. This only means that the associated 
+    mechanism is fit for the purpose for which it was defined. 
+    Careful reading of the documentation for the mechanism is 
+    necessary to understand the applicability of that mechanism. 
+    The IETF could recommend mechanisms that have limited 
+    applicability, but will provide applicability statements that 
+    describe any limitations of the mechanism or necessary constraints 
+    on its use.
 - N: Indicates that the item has not been evaluated by
-  the IETF.
+    the IETF and that the IETF has made no statement about the 
+    suitability of the associated mechanism. This does not necessarily 
+    mean that the mechanism is flawed, only that no consensus exists. 
+    The IETF might have consensus to leave an items marked as "N" on 
+    the basis of it having limited applicability or usage constraints.
 - D: Indicates that the item is discouraged and SHOULD
-  NOT or MUST NOT be used.
+    NOT or MUST NOT be used. This marking could be used to identify 
+    mechanisms that might result in problems if they are used, such as 
+    a weak cryptographic algorithm or a mechanism that might cause 
+    interoperability problems in deployment.
 
 Setting the Recommended item to "Y" or "D" or changing a
 item whose current value is "Y" or "D" requires standards action.
 Not all items defined in standards track documents need to be
 marked as Recommended. Changing the Recommended status of a standards
 track item requires standards action.
-
-If an item is not marked as "Recommended" (i.e., "N"), it does not
-necessarily mean that it is flawed; rather, it indicates that the
-item either has not been through the IETF consensus process, has
-limited applicability, or is intended only for specific use cases.
-Note that items which have IETF consensus and which are believed
-to be generally safe MAY be marked "Y" even if they are only
-intended for some specific application, such as WebRTC or IoT.
 
 [Note: the registries in the rest of the document will need to have the recommended column updated
 appropriately, specifically to deprecate MD5 and SHA-1, etc.]
